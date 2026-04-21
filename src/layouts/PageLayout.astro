@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import PageHero from '../components/PageHero.astro'
+import Breadcrumb from '../components/Breadcrumb.astro'
+
+interface Props {
+  title: string
+  description: string
+  ogImage?: string
+  caption?: string
+  heading: string
+  intro?: string
+  breadcrumb: string
+  parentBreadcrumbHref?: string
+  parentBreadcrumbLabel?: string
+}
+
+const { title, description, ogImage, caption, heading, intro, breadcrumb, parentBreadcrumbHref, parentBreadcrumbLabel } = Astro.props
+---
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+  <PageHero caption={caption} heading={heading} intro={intro}>
+    <Breadcrumb slot="breadcrumb" label={breadcrumb} parentHref={parentBreadcrumbHref} parentLabel={parentBreadcrumbLabel} />
+  </PageHero>
+  <slot />
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+interface Props {
+  isHome?: boolean
+}
+
+const { isHome = false } = Astro.props
+const navClass = isHome ? 'nav' : 'nav nav-solid'
+const palvelutHref = isHome ? '#palvelut' : '/#palvelut'
+const yhteystiedotHref = isHome ? '#yhteydenotto' : '/yhteystiedot'
+const ctaHref = isHome ? '#yhteydenotto' : '/yhteystiedot'
+---
+<nav class={navClass} id="nav">
+  <div class="container-editorial-wide nav-inner">
+    <a href="/" class="nav-brand">
+      Miinala &amp; Kaisanlahti
+      <small>Asianajotoimisto · Lappi</small>
+    </a>
+    <div class="nav-links">
+      <a href={palvelutHref} class="nav-link">Palvelut</a>
+      <a href="/asianajajat" class="nav-link">Asianajajat</a>
+      <a href="/kustannukset" class="nav-link">Kustannukset</a>
+      <a href="/artikkelit" class="nav-link">Artikkelit</a>
+      <a href={yhteystiedotHref} class="nav-link">Yhteystiedot</a>
+    </div>
+    <a href={ctaHref} class="nav-cta">
+      <span>Varaa ensitapaaminen</span>
+      <span>→</span>
+    </a>
+    <button class="nav-menu-btn" id="navMenuBtn" aria-label="Valikko">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <div class="container-editorial">
+    <div class="nav-mobile-links">
+      <a href={palvelutHref} class="nav-mobile-link" data-closemob>Palvelut</a>
+      <a href="/asianajajat" class="nav-mobile-link" data-closemob>Asianajajat</a>
+      <a href="/kustannukset" class="nav-mobile-link" data-closemob>Kustannukset</a>
+      <a href="/artikkelit" class="nav-mobile-link" data-closemob>Artikkelit</a>
+      <a href={yhteystiedotHref} class="nav-mobile-link" data-closemob>Yhteystiedot</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Breadcrumb from '../components/Breadcrumb.astro'
+
+interface Props {
+  title: string
+  description: string
+  heading: string
+  date: string
+  author: string
+  readingTime: string
+}
+
+const { title, description, heading, date, author, readingTime } = Astro.props
+---
+<BaseLayout title={title} description={description}>
+  <slot name="head" slot="head" />
+  <header class="article-hero">
+    <div class="container-editorial-wide">
+      <Breadcrumb label={heading} parentHref="/artikkelit" parentLabel="Artikkelit" />
+      <h1>{heading}</h1>
+      <p class="summary">{description}</p>
+      <div class="article-hero-meta">
+        <div class="block">
+          <span class="lbl">Kirjoittaja</span>
+          <span class="val">{author}</span>
+        </div>
+        <div class="block">
+          <span class="lbl">Julkaistu</span>
+          <span class="val-mono">{date}</span>
+        </div>
+        <div class="block">
+          <span class="lbl">Lukuaika</span>
+          <span class="val-mono">{readingTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article class="article-body">
+    <div class="article-prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

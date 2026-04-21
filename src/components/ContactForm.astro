@@ -1,0 +1,70 @@
+---
+interface Props {
+  id?: string
+}
+
+const { id = 'contactForm' } = Astro.props
+---
+<style>
+  #formThanks { display: none; }
+</style>
+<form class="contact-form" id={id} novalidate>
+  <div class="field-row">
+    <div class="field">
+      <label for="cf-name">Nimi</label>
+      <input id="cf-name" name="name" type="text" required autocomplete="name" />
+    </div>
+    <div class="field">
+      <label for="cf-phone">Puhelin</label>
+      <input id="cf-phone" name="phone" type="tel" autocomplete="tel" />
+    </div>
+  </div>
+  <div class="field-row">
+    <div class="field">
+      <label for="cf-email">Sähköposti</label>
+      <input id="cf-email" name="email" type="email" required autocomplete="email" />
+    </div>
+    <div class="field">
+      <label for="cf-topic">Aihealue</label>
+      <select id="cf-topic" name="topic" required>
+        <option value="">— valitse —</option>
+        <option>Rikosasia</option>
+        <option>Perheoikeudellinen asia</option>
+        <option>Perintöoikeudellinen asia</option>
+        <option>Riita-asia</option>
+        <option>Muu / en osaa sanoa</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label for="cf-office">Kumpi toimipaikka sopii paremmin?</label>
+    <select id="cf-office" name="office">
+      <option>Ei väliä — kuka tahansa</option>
+      <option>Rovaniemi — Satu Miinala</option>
+      <option>Kemijärvi — Niina Kaisanlahti</option>
+      <option>Etätapaaminen (puhelin / video)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="cf-msg">Kerro tilanteesta</label>
+    <textarea id="cf-msg" name="message" required placeholder="Muutama rivi riittää — jatkamme puhelimessa."></textarea>
+  </div>
+  <label class="form-privacy">
+    <input type="checkbox" required />
+    <span>
+      Hyväksyn, että tietojani käsitellään yhteydenoton hoitamiseksi
+      <a href="/tietosuojaseloste">tietosuojaselosteen</a> mukaisesti.
+      Yhteydenotto ei vielä muodosta toimeksianto­suhdetta.
+    </span>
+  </label>
+  <div class="form-submit">
+    <button type="submit">
+      <span>Lähetä viesti</span>
+      <span>→</span>
+    </button>
+  </div>
+  <div class="form-thanks" id="formThanks">
+    <strong>Kiitos viestistäsi.</strong>
+    Otamme yhteyttä pian — yleensä saman päivän aikana.
+  </div>
+</form>

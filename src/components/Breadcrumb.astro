@@ -1,0 +1,20 @@
+---
+interface Props {
+  label: string
+  parentHref?: string
+  parentLabel?: string
+}
+
+const { label, parentHref, parentLabel } = Astro.props
+---
+<nav class="breadcrumb" aria-label="Murupolku">
+  <a href="/">Etusivu</a>
+  {parentHref && parentLabel && (
+    <Fragment>
+      <span class="sep">/</span>
+      <a href={parentHref}>{parentLabel}</a>
+    </Fragment>
+  )}
+  <span class="sep">/</span>
+  <span class="current" aria-current="page">{label}</span>
+</nav>

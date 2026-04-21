@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content'
+import PageLayout from '../../layouts/PageLayout.astro'
+
+const allPosts = await getCollection('blog')
+const posts = allPosts.sort((a, b) => {
+  const [da, ma, ya] = a.data.date.split('.').map(Number)
+  const [db, mb, yb] = b.data.date.split('.').map(Number)
+  return new Date(yb, mb - 1, db).getTime() - new Date(ya, ma - 1, da).getTime()
+})
+
+const categories: Record<string, string> = {
+  'avioero-ositus': 'Perheoikeus',
+  'perunkirjoitus-ohjeet': 'Perintöoikeus',
+  'rikoksen-uhrin-oikeudet': 'Rikosoikeus',
+}
+---
+<PageLayout
+  title="Artikkelit"
+  description="Artikkeleita avioerosta, perunkirjoituksesta ja rikoksen uhrin oikeuksista. Selkeitä oppaita asianajajilta Satu Miinala ja Niina Kaisanlahti."
+  caption="Lehteilyä — kirjoituksia lain rajalta"
+  heading="Artikkelit."
+  intro="Selkeitä oppaita elämäntilanteisiin, jotka harvoin tulevat yksin: avioero ja ositus, perunkirjoitus määräajassa, rikoksen uhrin oikeudet esitutkinnassa. Kirjoitamme ilman juridista koristelua."
+  breadcrumb="Artikkelit"
+>
+
+  <section class="blog-index">
+    <div class="container-editorial-wide">
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <a href={`/artikkelit/${post.id}`} class="blog-card">
+            <div class="blog-card-meta">
+              <span class="date">{post.data.date}</span>
+              <span>{categories[post.id] ?? ''}</span><br/>
+              <span>{post.data.readingTime} luettava</span>
+            </div>
+            <div class="blog-card-body">
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+              <span class="author">Kirjoittanut <em>{post.data.author}</em></span>
+            </div>
+            <span class="blog-card-cta">
+              <span>Lue</span>
+              <span>→</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div class="container-editorial-wide">
+      <div>
+        <h2>Kysymys, joka ei odota artikkelia?</h2>
+        <p>
+          Jos sinulla on akuutti tilanne, soita suoraan. Ensiarvio on maksuton,
+          eikä sinun tarvitse valmistella mitään etukäteen.
+        </p>
+      </div>
+      <div class="contact-band-actions">
+        <a href="tel:+358404876650">
+          <span>
+            <span class="lbl">Satu Miinala · Rovaniemi</span>
+            <span class="val">040 487 665</span>
+          </span>
+          <span>→</span>
+        </a>
+        <a href="tel:+358400914316">
+          <span>
+            <span class="lbl">Niina Kaisanlahti · Kemijärvi</span>
+            <span class="val">0400 914 316</span>
+          </span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>

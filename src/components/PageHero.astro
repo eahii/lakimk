@@ -1,0 +1,17 @@
+---
+interface Props {
+  caption?: string
+  heading: string
+  intro?: string
+}
+
+const { caption, heading, intro } = Astro.props
+---
+<header class="page-hero">
+  <div class="container-editorial-wide">
+    <slot name="breadcrumb" />
+    {caption && <span class="caption-editorial">{caption}</span>}
+    <h1 class="headline-editorial" set:html={heading} />
+    {intro && <p class="page-hero-intro">{intro}</p>}
+  </div>
+</header>

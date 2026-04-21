@@ -1,0 +1,54 @@
+---
+interface Props {
+  heading?: string
+  description?: string
+  phone: string
+  name: string
+  email: string
+  formHref: string
+  hours?: string
+}
+
+const {
+  heading = 'Maksuton ensiarvio — 20 minuuttia.',
+  description = 'Kerro lyhyesti tilanteestasi. Arvioimme, miten voimme auttaa ja mitä seuraavaksi kannattaa tehdä. Ei sitoumuksia.',
+  phone,
+  name,
+  email,
+  formHref,
+  hours = 'Arkisin 9–16 · Pyydettäessä myös iltaisin',
+} = Astro.props
+
+const telHref = `tel:+358${phone.replace(/^0/, '').replace(/\s/g, '')}`
+const mailHref = `mailto:${email}`
+---
+<aside>
+  <div class="side-cta">
+    <span class="caption-editorial">Ensitapaaminen</span>
+    <h3>{heading}</h3>
+    <p>{description}</p>
+    <a href={formHref} class="side-cta-btn">
+      <span>Varaa aika</span>
+      <span>→</span>
+    </a>
+    <div class="side-cta-divider"></div>
+    <div class="side-cta-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg>
+      <span>
+        <strong>{name}</strong><br/>
+        <a href={telHref}>{phone}</a>
+      </span>
+    </div>
+    <div class="side-cta-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+      <span>
+        <a href={mailHref}>{email}</a>
+      </span>
+    </div>
+    <div class="side-cta-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>{hours}</span>
+    </div>
+    <span class="side-cta-meta">Luottamuksellinen · Ei sitoumuksia</span>
+  </div>
+</aside>

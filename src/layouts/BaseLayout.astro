@@ -1,0 +1,64 @@
+---
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+import { SITE, LAWYERS, OFFICES } from '../config/site.ts'
+
+interface Props {
+  title: string
+  description: string
+  ogImage?: string
+  isHome?: boolean
+}
+
+const { title, description, ogImage = '/images/niina.webp', isHome = false } = Astro.props
+const canonicalUrl = new URL(Astro.url.pathname, SITE.url).href
+const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : new URL(ogImage, SITE.url).href
+
+const legalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LegalService', 'LocalBusiness'],
+  name: SITE.fullName,
+  url: SITE.url,
+  telephone: LAWYERS.map(l => `+358${l.phone.replace(/^0/, '').replace(/\s/g, '')}`),
+  email: LAWYERS.map(l => l.email),
+  areaServed: 'Lappi',
+  address: OFFICES.map(o => ({
+    '@type': 'PostalAddress',
+    streetAddress: o.address,
+    postalCode: o.zip.split(' ')[0],
+    addressLocality: o.city,
+    addressCountry: 'FI',
+  })),
+}
+---
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title} | Miinala &amp; Kaisanlahti</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={`${title} | Miinala & Kaisanlahti`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageAbsolute} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | Miinala & Kaisanlahti`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageAbsolute} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(legalServiceSchema)} />
+  <slot name="head" />
+</head>
+<body>
+  <Nav isHome={isHome} />
+  <slot />
+  <Footer />
+  <script is:inline src="/scripts/site.js"></script>
+</body>
+</html>

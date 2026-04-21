@@ -1,0 +1,373 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import ContactForm from '../components/ContactForm.astro'
+import { SITE } from '../config/site.ts'
+---
+<PageLayout
+  title="Yhteystiedot"
+  description="Toimipaikat Rovaniemi ja Kemijärvi. Osoite, puhelin, sähköposti ja yhteydenottolomake."
+  caption="Tieto — toimipaikat"
+  heading="Yhteystiedot."
+  intro="Kaksi toimipaikkaa Lapissa — Rovaniemellä ja Kemijärvellä. Tapaamme myös etäyhteyden kautta, sinulle sopivaan aikaan."
+  breadcrumb="Yhteystiedot"
+>
+
+<!-- OFFICES -->
+<section class="offices-section">
+  <div class="container-editorial-wide">
+    <div class="offices-grid">
+
+      <!-- ROVANIEMI -->
+      <article class="office-card">
+        <div class="office-map">
+          <span class="office-map-label">Toimipaikka 01 — Rovaniemi</span>
+          <div class="office-map-pin">
+            <div class="office-map-pin-dot"></div>
+            <div class="office-map-pin-city">Rovaniemi</div>
+            <div class="office-map-pin-note">Rovakatu 20–22 B 50</div>
+          </div>
+        </div>
+        <span class="office-tag">Päätoimipaikka · Lapin maakunta</span>
+        <h2>Rovaniemen toimisto</h2>
+        <div class="office-addr-block">
+          Rovakatu 20–22 B 50<br/>
+          96200 Rovaniemi
+        </div>
+
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg>
+          <div>
+            <span class="info-lbl">Satu Miinala</span>
+            <div class="info-val"><a href="tel:+358404876650">040 487 665</a></div>
+          </div>
+        </div>
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+          <div>
+            <span class="info-lbl">Sähköposti</span>
+            <div class="info-val"><a href="mailto:satu@miinalakaisanlahti.fi">satu@miinalakaisanlahti.fi</a></div>
+          </div>
+        </div>
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <span class="info-lbl">Aukioloajat</span>
+            <div class="info-val">Arkisin 9 – 16<br/>Muulloin sopimuksesta</div>
+          </div>
+        </div>
+
+        <div class="office-practical">
+          <strong>Tuleminen toimistolle</strong>
+          Toimisto sijaitsee Rovaniemen keskustassa, kävelyetäisyydellä
+          linja-autoasemalta (6 min) ja rautatieasemalta (12 min). Vieraspaikoitus
+          Rovakadun varrella sekä Revontuli-parkkihallissa. Esteetön pääsy
+          rakennuksen pääovesta hissiin.
+        </div>
+      </article>
+
+      <!-- KEMIJÄRVI -->
+      <article class="office-card">
+        <div class="office-map var-2">
+          <span class="office-map-label">Toimipaikka 02 — Kemijärvi</span>
+          <div class="office-map-pin">
+            <div class="office-map-pin-dot"></div>
+            <div class="office-map-pin-city">Kemijärvi</div>
+            <div class="office-map-pin-note">Vapaudenkatu 8 A</div>
+          </div>
+        </div>
+        <span class="office-tag">Itä-Lappi · Kemijärven seutu</span>
+        <h2>Kemijärven toimisto</h2>
+        <div class="office-addr-block">
+          Vapaudenkatu 8 A<br/>
+          98100 Kemijärvi
+        </div>
+
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg>
+          <div>
+            <span class="info-lbl">Niina Kaisanlahti</span>
+            <div class="info-val"><a href="tel:+358400914316">0400 914 316</a></div>
+          </div>
+        </div>
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+          <div>
+            <span class="info-lbl">Sähköposti</span>
+            <div class="info-val"><a href="mailto:niina@miinalakaisanlahti.fi">niina@miinalakaisanlahti.fi</a></div>
+          </div>
+        </div>
+        <div class="office-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <span class="info-lbl">Aukioloajat</span>
+            <div class="info-val">Tiistaisin ja torstaisin 9 – 16<br/>Muina päivinä sopimuksesta</div>
+          </div>
+        </div>
+
+        <div class="office-practical">
+          <strong>Tuleminen toimistolle</strong>
+          Toimisto sijaitsee Kemijärven keskustassa kirkkoa vastapäätä.
+          Ilmainen vieraspaikoitus rakennuksen pihassa. Pohjoisesta tai etelästä
+          tuleva voi myös pysähtyä matkalla Rovaniemeltä — sovitaan tapaaminen
+          sille päivälle, kun olet kaupungissa.
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="yhteydenotto">
+  <div class="container-editorial-wide">
+    <div class="form-section-grid">
+      <div class="form-intro">
+        <span class="caption-editorial">Yhteydenottolomake</span>
+        <h2>Kerro lyhyesti, mistä on kyse.</h2>
+        <p>
+          Vastaamme yleensä saman päivän aikana, kiireellisissä rikosasioissa
+          tunnin kuluessa. Ensimmäinen 20 minuutin arviokeskustelu on aina
+          maksuton.
+        </p>
+        <p>
+          Et tarvitse valmista tarinaa. Muutama rivi tilanteesta riittää,
+          soitamme takaisin ja käymme loput puhelimessa.
+        </p>
+        <div class="disclaimer">
+          Huom: Älä lähetä lomakkeen kautta arkaluontoisia tietoja (esim.
+          yksityiskohtia meneillään olevasta rikosasiasta). Teemme sen
+          suojatussa kanavassa heti ensitapaamisen jälkeen.
+        </div>
+      </div>
+
+      <ContactForm id="contactForm" />
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT BAND -->
+<section class="contact-band">
+  <div class="container-editorial-wide">
+    <div>
+      <h2>Kiireellinen asia? Soita suoraan.</h2>
+      <p>
+        Kiireellisissä rikosasioissa — kuulustelu, pidätys, lähestymiskielto —
+        älä jää odottamaan sähköpostia. Soita Niinalle suoraan, ympäri
+        vuorokauden.
+      </p>
+    </div>
+    <div class="contact-band-actions">
+      <a href="tel:+358404876650">
+        <span><span class="lbl">Satu · Perhe- &amp; perintöasiat</span><span class="val">040 487 665</span></span>
+        <span>→</span>
+      </a>
+      <a href="tel:+358400914316">
+        <span><span class="lbl">Niina · Rikos- &amp; riita-asiat (24/7)</span><span class="val">0400 914 316</span></span>
+        <span>→</span>
+      </a>
+      <a href={SITE.kyc} target="_blank" rel="noopener">
+        <span><span class="lbl">Asiakkaan tunnistaminen (KYC)</span><span class="val">Tunnistaudu verkossa</span></span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</PageLayout>
+
+<style>
+  .offices-section {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+  }
+  @media (min-width: 768px) { .offices-section { padding: 7rem 0; } }
+  .offices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  @media (min-width: 900px) { .offices-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+  .office-map {
+    height: 280px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg,
+        oklch(52% 0.018 160) 0%,
+        oklch(38% 0.022 160) 55%,
+        oklch(26% 0.015 160) 100%);
+  }
+  .office-map.var-2 {
+    background:
+      linear-gradient(140deg,
+        oklch(58% 0.014 85) 0%,
+        oklch(44% 0.016 85) 55%,
+        oklch(30% 0.012 85) 100%);
+  }
+  .office-map::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(30deg,
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 22px),
+      repeating-linear-gradient(-30deg,
+        rgba(255,255,255,0.04) 0px,
+        rgba(255,255,255,0.04) 1px,
+        transparent 1px,
+        transparent 22px);
+  }
+  .office-map-label {
+    position: absolute;
+    top: 1.25rem; left: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .office-map-pin {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  .office-map-pin-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 0 8px hsl(var(--primary) / 0.2),
+                0 0 0 20px hsl(var(--primary) / 0.08);
+    margin: 0 auto 0.75rem;
+  }
+  .office-map-pin-city {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.625rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .office-map-pin-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-top: 0.5rem;
+  }
+  .office-card h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.25rem);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .office-card .office-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .office-addr-block {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: hsl(var(--foreground));
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  .office-info-row {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(var(--border) / 0.6);
+  }
+  .office-info-row:last-of-type { border-bottom: 0; }
+  .office-info-row svg {
+    width: 18px; height: 18px;
+    color: hsl(var(--primary));
+    flex: 0 0 auto;
+    margin-top: 3px;
+  }
+  .office-info-row .info-lbl {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+  .office-info-row .info-val {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: hsl(var(--foreground) / 0.9);
+  }
+  .office-info-row .info-val a:hover { color: hsl(var(--primary)); }
+  .office-practical {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: hsl(var(--secondary) / 0.5);
+    border-left: 2px solid hsl(var(--primary));
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: hsl(var(--foreground) / 0.85);
+  }
+  .office-practical strong {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    color: hsl(var(--foreground));
+    font-size: 1.0625rem;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .form-section {
+    padding: 5rem 0;
+    background: hsl(var(--secondary) / 0.4);
+    border-top: 1px solid hsl(var(--border));
+  }
+  @media (min-width: 768px) { .form-section { padding: 7rem 0; } }
+  .form-section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  @media (min-width: 1024px) { .form-section-grid { grid-template-columns: 1fr 1.3fr; gap: 6rem; } }
+  .form-intro h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-intro p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: hsl(var(--foreground) / 0.8);
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    max-width: 28rem;
+  }
+  .form-intro .disclaimer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid hsl(var(--border));
+    font-size: 0.8125rem;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.6;
+    max-width: 28rem;
+  }
+</style>

@@ -1,0 +1,103 @@
+---
+import { getCollection, render } from 'astro:content'
+import ArticleLayout from '../../layouts/ArticleLayout.astro'
+import { LAWYERS } from '../../config/site.ts'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map(p => ({ params: { slug: p.id }, props: { post: p } }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+
+const [dd, mm, yyyy] = post.data.date.split('.')
+const isoDate = `${yyyy}-${mm}-${dd}`
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  datePublished: isoDate,
+  author: {
+    '@type': 'Person',
+    name: post.data.author,
+  },
+}
+
+const allPosts = await getCollection('blog')
+const otherPosts = allPosts
+  .filter(p => p.id !== post.id)
+  .sort((a, b) => {
+    const [da, ma, ya] = a.data.date.split('.').map(Number)
+    const [db, mb, yb] = b.data.date.split('.').map(Number)
+    return new Date(yb, mb - 1, db).getTime() - new Date(ya, ma - 1, da).getTime()
+  })
+
+const categories: Record<string, string> = {
+  'avioero-ositus': 'Perheoikeus',
+  'perunkirjoitus-ohjeet': 'Perintöoikeus',
+  'rikoksen-uhrin-oikeudet': 'Rikosoikeus',
+}
+---
+<ArticleLayout
+  title={post.data.title}
+  description={post.data.description}
+  heading={post.data.title}
+  date={post.data.date}
+  author={post.data.author}
+  readingTime={post.data.readingTime}
+>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(articleSchema)} />
+  <Content />
+  <div class="article-foot">
+    <div class="article-foot-author">
+      <span class="lbl">Kirjoittaja</span>
+      <span class="name">{post.data.author}</span>
+    </div>
+  </div>
+</ArticleLayout>
+
+<section class="related">
+  <div class="container-editorial-wide">
+    <div class="related-header">
+      <h2>Liittyviä kirjoituksia</h2>
+      <a href="/artikkelit" class="cta-editorial">
+        <span>Kaikki artikkelit</span>
+        <span>→</span>
+      </a>
+    </div>
+    <div class="related-grid">
+      {otherPosts.map((p) => (
+        <a href={`/artikkelit/${p.id}`} class="related-card">
+          <span class="meta">{categories[p.id] ?? ''} · {p.data.date}</span>
+          <h3>{p.data.title}</h3>
+          <p>{p.data.description}</p>
+          <span class="more">Lue <span>→</span></span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="contact-band">
+  <div class="container-editorial-wide">
+    <div>
+      <h2>Tarvitsetko apua asianajajalta?</h2>
+      <p>
+        Ensiarvio on aina maksuton. Soita tai lähetä viesti — kerromme
+        samana päivänä, miten asiasi kannattaa edetä.
+      </p>
+    </div>
+    <div class="contact-band-actions">
+      {LAWYERS.map((l) => (
+        <a href={`tel:+358${l.phone.replace(/^0/, '').replace(/\s/g, '')}`}>
+          <span>
+            <span class="lbl">{l.name} · {l.office.split(' &')[0]}</span>
+            <span class="val">{l.phone}</span>
+          </span>
+          <span>→</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

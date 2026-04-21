@@ -1,0 +1,464 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import { SITE } from '../config/site.ts'
+---
+<PageLayout
+  title="Kustannukset"
+  description="Asianajopalkkiot selkeästi: tuntiveloitus, kokonaishinta, oikeusturvavakuutus ja valtion oikeusapu. Rovaniemi ja Kemijärvi."
+  caption="Tieto — hinnoittelu"
+  heading="Kustannukset."
+  intro="Asianajopalkkion rakenne käydään aina läpi ennen toimeksiantoa. Alla kolme yleistä tapaa — ja milloin valtio, vakuutus tai vastapuoli maksaa."
+  breadcrumb="Kustannukset"
+>
+
+<!-- PRICING TIERS -->
+<section class="pricing">
+  <div class="container-editorial-wide">
+    <div class="pricing-header">
+      <span class="caption-editorial">01 — Veloitustavat</span>
+      <h2>Kolme tapaa, joilla asianajopalkkio muodostuu.</h2>
+      <p>
+        Useimmissa tapauksissa sovellamme tuntiveloitusta, mutta selkeissä
+        rutiiniasioissa annamme kokonaishinnan ennen toimeksiantoa.
+        Vakuutus- tai oikeusapuasioissa laskutamme lähtökohtaisesti suoraan
+        vakuutusyhtiötä tai valtiota.
+      </p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier">
+        <span class="tier-num">A — Tuntiveloitus</span>
+        <h3>Tunti­perusteinen palkkio</h3>
+        <div class="tier-price">280 €<small>/ tunti, alv 0 %</small></div>
+        <div class="tier-body">
+          <p>
+            Yksityishenkilöille ja yrityksille. Hinta on sama molemmilta
+            asianajajilta. Alv 25,5 % lisätään loppusummaan.
+          </p>
+          <p>
+            Laskutamme varttitunnin tarkkuudella työstä, joka todella tehtiin —
+            neuvotteluista, asiakirjojen laatimisesta, puhelinkeskusteluista ja
+            oikeudenkäynneistä.
+          </p>
+        </div>
+      </div>
+
+      <div class="tier">
+        <span class="tier-num">B — Kokonaishinta</span>
+        <h3>Kiinteä kokonaishinta</h3>
+        <div class="tier-price">alk. 450 €<small>/ toimeksianto</small></div>
+        <div class="tier-body">
+          <p>
+            Selkeille rutiiniasioille: avioehto, testamentti, yksinkertainen
+            perunkirjoitus tai lahjakirja. Hinta sovitaan ennen työn
+            aloittamista, eikä se muutu matkan varrella.
+          </p>
+          <p>
+            Sisältää alkutapaamisen, asiakirjan laadinnan, tarkistuksen ja
+            allekirjoitustilaisuuden.
+          </p>
+        </div>
+      </div>
+
+      <div class="tier">
+        <span class="tier-num">C — Julkinen palkkio</span>
+        <h3>Valtion tai vakuutuksen taksa</h3>
+        <div class="tier-price">110 €<small>/ tunti · valtio</small></div>
+        <div class="tier-body">
+          <p>
+            Kun asia kuuluu oikeusavun tai oikeusturvavakuutuksen piiriin,
+            laskutamme valtion taksan tai vakuutusyhtiön hyväksymän palkkion —
+            et koskaan enempää.
+          </p>
+          <p>
+            Omavastuu tai perusomavastuu maksetaan asiakkaalta. Selvitämme sen
+            aina etukäteen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO PAYS -->
+<section class="facts">
+  <div class="container-editorial-wide">
+    <div class="facts-header">
+      <span class="caption-editorial">02 — Kuka maksaa</span>
+      <h2>Usein et maksa palkkiota itse. Selvitämme sen ensimmäiseksi.</h2>
+      <p>
+        Oikeusturvavakuutus, valtion oikeusapu tai vastapuolen
+        oikeudenkäyntikuluvelvoite voivat kattaa palkkion kokonaan tai
+        osittain. Käymme nämä läpi aina ennen toimeksiantoa — se on osa
+        ensitapaamista.
+      </p>
+    </div>
+
+    <div class="fact-row">
+      <span class="fact-num">01</span>
+      <div class="fact-title">Oikeus­turva­vakuutus</div>
+      <div class="fact-body">
+        <p>
+          Koti-, matka-, yritys- tai vapaa-ajanvakuutukseen liittyy usein
+          oikeusturvaosa. Tarkistamme puolestasi, kattaako vakuutuksesi asian
+          — se vie noin päivän.
+        </p>
+        <p>
+          Vakuutuksesta maksettava enimmäismäärä on yleensä 8 500–10 000 €.
+          Omavastuu on tyypillisesti 15–20 % ja vähintään 200–300 €.
+        </p>
+      </div>
+    </div>
+
+    <div class="fact-row">
+      <span class="fact-num">02</span>
+      <div class="fact-title">Valtion oikeusapu</div>
+      <div class="fact-body">
+        <p>
+          Jos käyttövarasi (tulot ja varallisuus huomioiden) ovat tietyn rajan
+          alla, valtio maksaa avustajan palkkion kokonaan tai osittain.
+          Yksinasuvan enimmäisraja on noin 1 350 € kuukaudessa — perheellisellä
+          korkeampi.
+        </p>
+        <p>
+          Teemme hakemuksen oikeusaputoimistoon puolestasi ja saamme
+          päätöksen yleensä muutamassa päivässä.
+        </p>
+      </div>
+    </div>
+
+    <div class="fact-row">
+      <span class="fact-num">03</span>
+      <div class="fact-title">Rikosasioissa — puolustajan määräys</div>
+      <div class="fact-body">
+        <p>
+          Vakavan rikoksen (mm. vankeusuhkaisen rikoksen) epäillyllä on oikeus
+          käräjäoikeuden määräämään puolustajaan. Tällöin valtio maksaa
+          palkkion, riippumatta varallisuudesta — ja perii sen tuomitulta
+          takaisin vain, jos tuomitaan.
+        </p>
+        <p>
+          Asianomistajalla on vastaava oikeus avustajaan mm. vakavissa
+          väkivalta- ja seksuaalirikosasioissa.
+        </p>
+      </div>
+    </div>
+
+    <div class="fact-row">
+      <span class="fact-num">04</span>
+      <div class="fact-title">Vastapuoli</div>
+      <div class="fact-body">
+        <p>
+          Riita-asian hävinnyt osapuoli on pääsääntöisesti velvollinen
+          korvaamaan voittajan kohtuulliset oikeudenkäyntikulut. Tämä on syytä
+          pitää mielessä, kun harkitsee kanteen nostamista — riski toimii
+          molempiin suuntiin.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KYC CALLOUT -->
+<section class="kyc-callout">
+  <div class="container-editorial-wide">
+    <div class="kyc-box">
+      <div>
+        <span class="caption-editorial">Asiakkaan tunnistaminen</span>
+        <h3>KYC — tunnistautuminen verkossa.</h3>
+        <p>
+          Asianajajalaki edellyttää meitä tunnistamaan jokaisen uuden
+          asiakkaan. Teet sen kätevästi verkossa Netvisor KYC -palvelussa
+          ennen ensitapaamista — kestää noin kolme minuuttia.
+        </p>
+      </div>
+      <a href={SITE.kyc} target="_blank" rel="noopener" class="kyc-btn">
+        <span>Avaa KYC-tunnistautuminen</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container-editorial-wide">
+    <div class="faq-header">
+      <span class="caption-editorial">03 — Usein kysyttyä</span>
+      <h2 class="faq-main-heading">Kysymyksiä kustannuksista.</h2>
+    </div>
+    <div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <h3>Maksaako ensitapaaminen mitään?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Ei. Ensimmäinen 20 minuutin arviokeskustelu on aina maksuton, olitpa
+            yhteydessä puhelimitse tai paikan päällä. Tapaamisen aikana käymme
+            läpi, mistä on kyse, voimmeko auttaa ja mikä maksutapa sopii
+            tilanteeseesi. Mihinkään ei tarvitse sitoutua.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <h3>Saanko tietää etukäteen, kuinka paljon asia maksaa?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Selkeissä rutiiniasioissa annamme kokonaishinnan ennen
+            toimeksiantoa. Kun työmäärää on mahdoton arvioida etukäteen
+            (riita-asiat, pitkittyvät rikosasiat), annamme haarukan ja
+            laskutamme tunneittain. Päivitämme arvioita matkan varrella, jos
+            työmäärä selvästi muuttuu — emme anna yllätyksiä.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <h3>Miten tarkistan, korvaako vakuutukseni asian?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Toimita meille vakuutusyhtiösi nimi ja vakuutuksen numero, niin
+            pyydämme vakuutusyhtiöstä oikeusturvailmoituksen ja saamme
+            vastauksen yleensä 1–3 arkipäivässä. Voit myös soittaa suoraan
+            vakuutusyhtiöllesi — me kerromme, mitä kysyä.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <h3>Entä jos en kykene maksamaan palkkiota kerralla?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Sovimme maksuaikatauluista tarvittaessa. Laskutamme pääsääntöisesti
+            kuukausittain tehdystä työstä, ja laskuille voidaan sopia eräpäivän
+            pidennys. Haluamme, että oikeudellinen apu ei jää taloudellisen
+            tilanteen taakse — keskustellaan asiasta avoimesti.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT BAND -->
+<section class="contact-band">
+  <div class="container-editorial-wide">
+    <div>
+      <h2>Haluatko tietää, mitä sinun asiasi maksaisi?</h2>
+      <p>
+        Soita tai laita viestiä. Kerromme saman tien, tuleeko kyseeseen
+        tuntiveloitus, kokonaishinta vai oikeusapu — ja arvioimme, kattaako
+        vakuutuksesi asian.
+      </p>
+    </div>
+    <div class="contact-band-actions">
+      <a href="tel:+358404876650">
+        <span><span class="lbl">Satu Miinala</span><span class="val">040 487 665</span></span>
+        <span>→</span>
+      </a>
+      <a href="tel:+358400914316">
+        <span><span class="lbl">Niina Kaisanlahti</span><span class="val">0400 914 316</span></span>
+        <span>→</span>
+      </a>
+      <a href="/yhteystiedot">
+        <span><span class="lbl">Yhteydenottolomake</span><span class="val">Varaa aika verkossa</span></span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</PageLayout>
+
+<style>
+  .pricing {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+  }
+  @media (min-width: 768px) { .pricing { padding: 7rem 0; } }
+  .pricing-header { max-width: 42rem; margin-bottom: 4rem; }
+  .pricing-header h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+  }
+  .pricing-header p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: hsl(var(--foreground) / 0.8);
+  }
+  .tiers {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid hsl(var(--border));
+  }
+  @media (min-width: 900px) { .tiers { grid-template-columns: repeat(3, 1fr); } }
+  .tier {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid hsl(var(--border));
+    position: relative;
+  }
+  @media (min-width: 900px) {
+    .tier { padding: 3rem 2.5rem; border-bottom: 0; border-right: 1px solid hsl(var(--border)); }
+    .tier:first-child { padding-left: 0; }
+    .tier:last-child { border-right: 0; padding-right: 0; }
+  }
+  .tier-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+  .tier h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .tier-price {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color: hsl(var(--primary));
+    margin-bottom: 0.5rem;
+  }
+  .tier-price small {
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: hsl(var(--muted-foreground));
+    letter-spacing: 0.05em;
+    margin-left: 0.25rem;
+  }
+  .tier-body {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: hsl(var(--foreground) / 0.85);
+  }
+  .tier-body p { margin-bottom: 0.75rem; }
+  .facts {
+    padding: 5rem 0;
+    background: hsl(var(--secondary) / 0.4);
+    border-top: 1px solid hsl(var(--border));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  @media (min-width: 768px) { .facts { padding: 7rem 0; } }
+  .facts-header { margin-bottom: 3.5rem; max-width: 42rem; }
+  .facts-header h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.875rem, 1.3rem + 2vw, 2.625rem);
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .facts-header p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: hsl(var(--foreground) / 0.8);
+    font-weight: 300;
+  }
+  .fact-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+    border-top: 1px solid hsl(var(--border));
+  }
+  .fact-row:last-child { border-bottom: 1px solid hsl(var(--border)); }
+  @media (min-width: 768px) {
+    .fact-row { grid-template-columns: 3rem 1fr 2fr; gap: 2.5rem; padding: 2.5rem 0; }
+  }
+  .fact-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: hsl(var(--primary));
+    letter-spacing: 0.1em;
+    padding-top: 0.4rem;
+  }
+  .fact-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .fact-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: hsl(var(--foreground) / 0.85);
+    font-weight: 300;
+    max-width: 34rem;
+  }
+  .fact-body p { margin-bottom: 0.75rem; }
+  .fact-body p:last-child { margin-bottom: 0; }
+  .fact-body a {
+    color: hsl(var(--primary));
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .kyc-callout {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+  }
+  @media (min-width: 768px) { .kyc-callout { padding: 6rem 0; } }
+  .kyc-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+    background: hsl(var(--secondary) / 0.6);
+    border-left: 2px solid hsl(var(--primary));
+  }
+  @media (min-width: 768px) {
+    .kyc-box { grid-template-columns: 1fr auto; gap: 3rem; align-items: center; padding: 3rem 3.5rem; }
+  }
+  .kyc-box h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.625rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+  .kyc-box p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: hsl(var(--foreground) / 0.8);
+    font-weight: 300;
+    max-width: 36rem;
+  }
+  .kyc-btn {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: background 300ms, gap 300ms;
+    white-space: nowrap;
+  }
+  .kyc-btn:hover { background: hsl(var(--foreground)); gap: 1rem; }
+  .faq-main-heading {
+    font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+    margin-top: 1rem;
+  }
+</style>

@@ -1,0 +1,439 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+---
+<PageLayout
+  title="Evästekäytäntö"
+  description="Mitä evästeitä verkkosivumme käyttää, miksi, kuinka kauan ja miten hallitset niitä. Asianajotoimisto Miinala & Kaisanlahti."
+  caption="Lakitieto — Evästeet"
+  heading="Evästekäytäntö."
+  intro="Verkkosivustomme käyttää rajattua määrää evästeitä. Alla erittely siitä, mitä ne ovat, kuinka kauan ne säilyvät ja miten hallitset suostumustasi."
+  breadcrumb="Evästekäytäntö"
+>
+
+<!-- DOCUMENT -->
+<section class="legal-doc">
+  <div class="container-editorial-wide">
+    <div class="legal-layout">
+
+      <aside class="legal-toc" aria-label="Sisällysluettelo">
+        <span class="legal-toc-label">Sisältö</span>
+        <ol>
+          <li><a href="#mita">Mitä evästeet ovat</a></li>
+          <li><a href="#suostumus">Suostumus ja oikeusperuste</a></li>
+          <li><a href="#kategoriat">Käytetyt evästeet</a></li>
+          <li><a href="#kolmannet">Kolmannen osapuolen palvelut</a></li>
+          <li><a href="#hallinta">Suostumuksen hallinta</a></li>
+          <li><a href="#selain">Evästeiden estäminen selaimessa</a></li>
+          <li><a href="#muutokset">Käytännön muutokset</a></li>
+        </ol>
+      </aside>
+
+      <div class="legal-prose">
+
+        <section id="mita">
+          <h2>Mitä evästeet ovat</h2>
+          <p>
+            Evästeet ovat pieniä tekstitiedostoja, jotka verkkosivusto tallentaa
+            päätelaitteellesi. Ne auttavat sivustoa toimimaan, muistamaan
+            valintasi ja parantamaan palvelun laatua. Osa evästeistä on
+            välttämättömiä, osa vapaaehtoisia.
+          </p>
+          <p>
+            Tämä käytäntö täydentää <a href="/tietosuojaseloste">tietosuojaselostettamme</a>
+            ja kuvaa, mitä evästeitä juuri tämä sivusto käyttää.
+          </p>
+        </section>
+
+        <section id="suostumus">
+          <h2>Suostumus ja oikeusperuste</h2>
+          <p>
+            Välttämättömät evästeet perustuvat sähköisen viestinnän
+            palveluista annetun lain 205 §:ään — ne tallennetaan ilman
+            erillistä suostumusta, koska ilman niitä sivusto ei toimi
+            pyydetysti.
+          </p>
+          <p>
+            Analytiikka- ja muut vapaaehtoiset evästeet perustuvat
+            <strong>suostumukseesi</strong> (GDPR 6 artikla 1 kohta a).
+            Voit antaa tai peruuttaa suostumuksen milloin tahansa evästekyselyn
+            tai alla olevan <em>Suostumuksen hallinta</em> -painikkeen kautta.
+            Ennen suostumuksen antamista asetetaan vain välttämättömät
+            evästeet.
+          </p>
+        </section>
+
+        <section id="kategoriat">
+          <h2>Käytetyt evästeet</h2>
+          <p>
+            Kaikki sivuston evästeet on luokiteltu kahteen ryhmään. Alla
+            eritellään evästeen nimi, sen asettaja, elinaika ja käyttötarkoitus.
+          </p>
+
+          <div class="category-head">
+            <h3>Välttämättömät</h3>
+            <span class="category-status">Aina päällä</span>
+          </div>
+          <div class="cookie-table">
+            <div class="cookie-row">
+              <div class="cookie-name">mk_session</div>
+              <div>
+                <div class="cookie-meta">Oma · Istunto</div>
+              </div>
+              <div class="cookie-desc">
+                Ylläpitää käyttäjän istuntoa (lomakkeiden tilaa, navigaation
+                avoimia valikoita). Poistuu, kun suljet selaimen.
+              </div>
+            </div>
+            <div class="cookie-row">
+              <div class="cookie-name">mk_consent</div>
+              <div>
+                <div class="cookie-meta">Oma · 12 kk</div>
+              </div>
+              <div class="cookie-desc">
+                Muistaa antamasi evästesuostumuksen, jotta emme kysy
+                valintaa jokaisella käynnillä.
+              </div>
+            </div>
+            <div class="cookie-row">
+              <div class="cookie-name">mk_csrf</div>
+              <div>
+                <div class="cookie-meta">Oma · Istunto</div>
+              </div>
+              <div class="cookie-desc">
+                Suojaa yhteydenottolomaketta väärennetyiltä lähetyksiltä
+                (CSRF-suoja). Tekninen, ei sisällä henkilötietoja.
+              </div>
+            </div>
+          </div>
+
+          <div class="category-head">
+            <h3>Analytiikka</h3>
+            <span class="category-status optional">Vapaaehtoinen</span>
+          </div>
+          <div class="cookie-table">
+            <div class="cookie-row">
+              <div class="cookie-name">_pa_id</div>
+              <div>
+                <div class="cookie-meta">Plausible · 30 min</div>
+              </div>
+              <div class="cookie-desc">
+                Yksilöi käyttäjän käynnin tilastointia varten.
+                Emme seuraa käyttäjää sivustojen välillä emmekä käytä
+                mainostarkoituksiin.
+              </div>
+            </div>
+            <div class="cookie-row">
+              <div class="cookie-name">_pa_ref</div>
+              <div>
+                <div class="cookie-meta">Plausible · 30 min</div>
+              </div>
+              <div class="cookie-desc">
+                Tallentaa sen, miltä sivulta saavuit meille — esimerkiksi
+                haku- tai suosittelupalvelusta.
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Sivusto ei käytä markkinointi- tai profilointievästeitä. Emme
+            välitä tietojasi mainosverkostoille.
+          </p>
+        </section>
+
+        <section id="kolmannet">
+          <h2>Kolmannen osapuolen palvelut</h2>
+          <p>
+            Sivuston toteutuksessa on muutama ulkoinen palvelu, jotka voivat
+            asettaa oman evästeensä tai ladata sisältöä selaimeesi:
+          </p>
+          <ul>
+            <li><strong>Google Fonts</strong> — kirjasinperheiden toimittaminen.
+              Ei aseta evästettä, mutta siirtää IP-osoitteen.</li>
+            <li><strong>Plausible Analytics</strong> — kävijämäärien tilastointi
+              evästeellä, joka aktivoituu vain suostumuksella. Tiedot
+              käsitellään EU-alueella.</li>
+          </ul>
+          <p>
+            Kolmannet osapuolet toimivat omina rekisterinpitäjinään niiden
+            tietojen osalta, jotka heidän palvelunsa kerää. Tietojen käsittelyä
+            säätelevät heidän oma tietosuojakäytäntönsä.
+          </p>
+        </section>
+
+        <section id="hallinta">
+          <h2>Suostumuksen hallinta</h2>
+          <p>
+            Voit muuttaa tai peruuttaa evästesuostumuksesi milloin tahansa.
+            Peruutus ei vaikuta ennen peruutusta tehtyyn, suostumukseen
+            perustuvaan käsittelyyn.
+          </p>
+          <div class="consent-row">
+            <button type="button" class="consent-btn primary" id="openConsent">Avaa evästevalinnat</button>
+            <button type="button" class="consent-btn" id="acceptAll">Hyväksy kaikki</button>
+            <button type="button" class="consent-btn" id="rejectOptional">Vain välttämättömät</button>
+          </div>
+          <p class="consent-note">
+            Painikkeet ohjaavat sivuston suostumustyökaluun. Jos et vielä
+            näe työkalua, se tarkoittaa, että olet asentanut sivustolle
+            jo tehdyn valinnan — voit aina palata tähän sivulle muuttaaksesi
+            sen.
+          </p>
+        </section>
+
+        <section id="selain">
+          <h2>Evästeiden estäminen selaimessa</h2>
+          <p>
+            Voit myös estää tai poistaa evästeet suoraan selaimen asetuksista.
+            Tällöin osa sivuston toiminnoista ei välttämättä toimi
+            odotetusti — esimerkiksi yhteydenottolomake saattaa hylätä
+            lähetyksen CSRF-suojan puuttuessa.
+          </p>
+          <ul>
+            <li><strong>Chrome / Edge</strong> — Asetukset → Tietosuoja ja
+              suojaus → Evästeet.</li>
+            <li><strong>Firefox</strong> — Asetukset → Tietosuoja ja
+              tietoturva → Evästeet ja sivustotiedot.</li>
+            <li><strong>Safari</strong> — Asetukset → Tietosuoja.</li>
+          </ul>
+          <p>
+            Mobiiliselaimissa asetukset löytyvät yleensä selaimen
+            kohdasta <em>Sivustoasetukset</em>.
+          </p>
+        </section>
+
+        <section id="muutokset">
+          <h2>Käytännön muutokset</h2>
+          <p>
+            Jos lisäämme tai poistamme evästeen, päivitämme tämän sivun ja
+            nostamme version numeroa. Olennaisista muutoksista pyydämme
+            suostumuksesi uudelleen ennen muutosten voimaantuloa.
+          </p>
+        </section>
+
+        <div class="legal-version">
+          <span>Versio <strong>1.3</strong></span>
+          <span>Julkaistu <strong>01.03.2026</strong></span>
+          <span>Seuraava tarkistus <strong>03/2027</strong></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT BAND -->
+<section class="contact-band">
+  <div class="container-editorial-wide">
+    <div>
+      <h2>Kysyttävää evästeistä?</h2>
+      <p>
+        Emme jaa tietojasi mainostajille emmekä seuraa sinua palveluiden
+        välillä. Jos jokin kohta on epäselvä, ota yhteyttä — vastaamme
+        mieluusti ja korjaamme tarvittaessa selosteen.
+      </p>
+    </div>
+    <div class="contact-band-actions">
+      <a href="mailto:satu@miinalakaisanlahti.fi">
+        <span><span class="lbl">Tietosuojavastaava</span><span class="val">satu@miinalakaisanlahti.fi</span></span>
+        <span>→</span>
+      </a>
+      <a href="/tietosuojaseloste">
+        <span><span class="lbl">Lue myös</span><span class="val">Tietosuojaseloste</span></span>
+        <span>→</span>
+      </a>
+      <a href="/yhteystiedot">
+        <span><span class="lbl">Yhteydenottolomake</span><span class="val">Jätä viesti verkossa</span></span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</PageLayout>
+
+<style>
+  .legal-doc { padding: 4rem 0 6rem; background: hsl(var(--background)); }
+  @media (min-width: 768px) { .legal-doc { padding: 6rem 0 8rem; } }
+  .legal-layout { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+  @media (min-width: 900px) { .legal-layout { grid-template-columns: 14rem 1fr; gap: 5rem; } }
+  .legal-toc { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.875rem; }
+  @media (min-width: 900px) { .legal-toc { position: sticky; top: 6rem; align-self: start; } }
+  .legal-toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: hsl(var(--primary)); display: block; margin-bottom: 1.25rem;
+  }
+  .legal-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: tocitem; border-left: 1px solid hsl(var(--border)); }
+  .legal-toc li { counter-increment: tocitem; }
+  .legal-toc a {
+    display: block; padding: 0.625rem 1rem;
+    color: hsl(var(--foreground) / 0.7);
+    font-weight: 400; line-height: 1.35;
+    transition: color 200ms, background 200ms;
+    border-left: 1px solid transparent; margin-left: -1px;
+  }
+  .legal-toc a::before {
+    content: counter(tocitem, decimal-leading-zero) " ";
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem; color: hsl(var(--muted-foreground));
+    margin-right: 0.5rem;
+  }
+  .legal-toc a:hover {
+    color: hsl(var(--primary));
+    border-left-color: hsl(var(--primary));
+    background: hsl(var(--secondary) / 0.5);
+  }
+  .legal-prose {
+    max-width: 42rem;
+    font-family: 'Inter', sans-serif; font-weight: 300;
+    font-size: 1rem; line-height: 1.75;
+    color: hsl(var(--foreground) / 0.88);
+    counter-reset: section;
+  }
+  .legal-prose > section { counter-increment: section; padding-top: 3rem; scroll-margin-top: 5rem; }
+  .legal-prose > section:first-child { padding-top: 0; }
+  .legal-prose h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-weight: 500;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+    line-height: 1.2; margin-bottom: 1.25rem;
+    letter-spacing: -0.01em; color: hsl(var(--foreground));
+  }
+  .legal-prose h2::before {
+    content: counter(section, decimal-leading-zero);
+    display: block; font-family: 'JetBrains Mono', monospace;
+    font-style: normal; font-size: 0.6875rem; letter-spacing: 0.2em;
+    color: hsl(var(--primary)); margin-bottom: 0.75rem; font-weight: 500;
+  }
+  .legal-prose h3 {
+    font-family: 'Inter', sans-serif; font-weight: 500;
+    font-size: 0.9375rem; letter-spacing: 0.02em;
+    margin-top: 2rem; margin-bottom: 0.5rem;
+    color: hsl(var(--foreground));
+  }
+  .legal-prose p { margin-bottom: 1.25rem; }
+  .legal-prose ul { margin: 0 0 1.5rem 0; padding: 0; list-style: none; }
+  .legal-prose ul li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; }
+  .legal-prose ul li::before {
+    content: ""; position: absolute; left: 0; top: 0.75em;
+    width: 0.5rem; height: 1px; background: hsl(var(--primary));
+  }
+  .legal-prose a { color: hsl(var(--primary)); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+  .legal-prose strong { font-weight: 500; color: hsl(var(--foreground)); }
+  .legal-version {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    padding-top: 3rem; margin-top: 3rem;
+    border-top: 1px solid hsl(var(--border));
+  }
+  .legal-version span strong { font-weight: 500; color: hsl(var(--foreground)); margin-left: 0.5rem; }
+  .cookie-table {
+    margin: 0 0 1.5rem 0;
+    border-top: 1px solid hsl(var(--border));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  .cookie-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px dashed hsl(var(--border));
+  }
+  .cookie-row:last-child { border-bottom: 0; }
+  @media (min-width: 720px) {
+    .cookie-row { grid-template-columns: 1.1fr 0.8fr 2fr; gap: 0 2rem; padding: 1.75rem 0; align-items: baseline; }
+  }
+  .cookie-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: hsl(var(--foreground));
+    font-weight: 500;
+  }
+  .cookie-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+  .cookie-desc {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: hsl(var(--foreground) / 0.85);
+  }
+  .category-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid hsl(var(--foreground));
+  }
+  .category-head h3 {
+    margin-top: 0 !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-style: italic;
+    font-size: 1.375rem !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.005em !important;
+  }
+  .category-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+  .category-status.optional { color: hsl(var(--muted-foreground)); }
+  .consent-row {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+    margin: 1.5rem 0 2rem;
+  }
+  .consent-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border: 1px solid hsl(var(--border));
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem; font-weight: 500;
+    color: hsl(var(--foreground));
+    background: hsl(var(--card));
+    transition: border-color 200ms, color 200ms, background 200ms;
+    cursor: pointer;
+  }
+  .consent-btn:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); }
+  .consent-btn.primary {
+    border-color: hsl(var(--primary));
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .consent-btn.primary:hover { background: hsl(var(--foreground)); border-color: hsl(var(--foreground)); color: hsl(var(--primary-foreground)); }
+  .consent-note {
+    font-size: 0.8125rem;
+    color: hsl(var(--muted-foreground));
+    padding: 0.875rem 1rem;
+    background: hsl(var(--secondary) / 0.5);
+    border-left: 2px solid hsl(var(--primary));
+    margin-top: -0.5rem;
+  }
+</style>
+
+<script is:inline>
+(function(){
+  function fire(name){
+    window.dispatchEvent(new CustomEvent('mk:consent', { detail: { action: name }}));
+    if (window.mkConsent && typeof window.mkConsent[name] === 'function') {
+      window.mkConsent[name]();
+    }
+  }
+  var open = document.getElementById('openConsent');
+  var acc  = document.getElementById('acceptAll');
+  var rej  = document.getElementById('rejectOptional');
+  if (open) open.addEventListener('click', function(){ fire('open'); });
+  if (acc)  acc .addEventListener('click', function(){ fire('acceptAll'); });
+  if (rej)  rej .addEventListener('click', function(){ fire('rejectOptional'); });
+})();
+</script>

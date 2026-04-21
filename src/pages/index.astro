@@ -1,0 +1,492 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { LAWYERS, OFFICES } from '../config/site.ts'
+---
+<BaseLayout
+  title="Asianajotoimisto"
+  description="Asianajotoimisto Miinala & Kaisanlahti hoitaa rikos-, perhe-, perintö- ja riita-asioita Rovaniemellä ja Kemijärvellä."
+  isHome={true}
+>
+
+<!-- HERO -->
+<section class="hero on-media">
+  <div class="hero-bg">
+    <div class="hero-img-placeholder"></div>
+    <span class="hero-img-label">[ kuva: toimiston sisäänkäynti / lakihylly ]</span>
+  </div>
+  <div class="hero-content">
+    <div class="container-editorial-wide">
+      <p class="caption-editorial hero-eyebrow">Luotettava kumppanisi</p>
+      <h1 class="headline-editorial-lg hero-headline">
+        Oikeudellista apua — rauhallisesti ja selkeästi.
+      </h1>
+      <p class="subheadline-editorial hero-sub">
+        Asianajotoimisto Miinala &amp; Kaisanlahti hoitaa rikos-, perhe-, perintö- ja
+        riita-asioita Rovaniemellä ja Kemijärvellä. Kerromme aina ensin arvion
+        tilanteestasi, mahdollisuuksistasi ja kustannuksista.
+      </p>
+      <div class="hero-ctas">
+        <a href="#yhteydenotto" class="cta-editorial hero-cta-primary">
+          <span>Ota yhteyttä</span>
+          <span class="cta-editorial-arrow">→</span>
+        </a>
+        <span class="hero-cta-meta">Ensiarvio maksuton · Lappi-alueella</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="values-grid-bg"></div>
+  <div class="container-editorial values-container-inner">
+    <div class="values-header" data-reveal>
+      <h2>Miksi me?</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" data-reveal>
+        <div class="value-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 22l5-3 5 3-1.21-8.12"/></svg>
+        </div>
+        <h3>Asianajajan ammattivastuu</h3>
+        <p>Toimimme Suomen Asianajajaliiton jäseninä. Sinulla on oikeus luottamukselliseen,
+          riippumattomaan ja ammattieettisesti valvottuun palveluun.</p>
+      </div>
+      <div class="value-card" data-reveal>
+        <div class="value-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
+        </div>
+        <h3>Vaitiolo ja luottamus</h3>
+        <p>Kaikki mitä meille kerrot jää välillemme. Käsittelemme asiasi hiljaa —
+          pienellä paikkakunnalla yksityisyys on erityisen tärkeää.</p>
+      </div>
+      <div class="value-card" data-reveal>
+        <div class="value-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Paikallisuus Lapissa</h3>
+        <p>Rovaniemi ja Kemijärvi ovat kotikenttäämme. Tuomme saman osaamisen
+          paikkakunnallesi — et tarvitse matkustaa kaupunkiin saadaksesi hyvää apua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="palvelut">
+  <div class="container-editorial">
+    <div class="services-header">
+      <div data-reveal>
+        <span class="caption-editorial services-caption">Mitä teemme</span>
+        <h2 class="headline-editorial">Palvelumme</h2>
+      </div>
+      <div class="services-header-intro" data-reveal>
+        <p>
+          Hoidamme asianajotehtäviä perhe-, perintö-, rikos- ja riita-asioissa.
+          Kerromme sinulle aluksi arvion tilanteestasi, mahdollisuuksistasi,
+          kustannuksista ja mahdollisista riskeistä.
+        </p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <a class="service-row" href="/palvelut/rikosasiat" data-reveal>
+        <span class="service-row-num">01</span>
+        <h3>Rikosasiat</h3>
+        <p>
+          Avustamme asianomistajia ja puolustamme syytettyjä esitutkinnassa ja
+          oikeudenkäynnissä. Olemme puolellasi alusta asti — hiljaa ja
+          luottamuksellisesti.
+        </p>
+        <span class="service-readmore">Lue lisää <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="service-row" href="/palvelut/perheoikeudelliset-asiat" data-reveal>
+        <span class="service-row-num">02</span>
+        <h3>Perheoikeudelliset asiat</h3>
+        <p>
+          Avioerot ja ositukset, lapsen huolto, asuminen, tapaamisoikeus ja elatus.
+          Haemme sopimisen edellytyksiä ja hoidamme asian pitävästi silloinkin, kun
+          riita on edessä.
+        </p>
+        <span class="service-readmore">Lue lisää <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="service-row" href="/palvelut/perintooikeudelliset-asiat" data-reveal>
+        <span class="service-row-num">03</span>
+        <h3>Perintöoikeudelliset asiat</h3>
+        <p>
+          Perunkirjoitukset, perinnönjaot ja testamentit. Perukirja laadittava
+          kolmessa kuukaudessa — otamme vastuun aikataulusta ja asiakirjoista puolestasi.
+        </p>
+        <span class="service-readmore">Lue lisää <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="service-row" href="/palvelut/riita-asiat" data-reveal>
+        <span class="service-row-num">04</span>
+        <h3>Riita-asiat</h3>
+        <p>
+          Sopimus-, työ-, vahingonkorvaus- ja kiinteistöriidat. Käymme tilanteesi
+          läpi punniten sekä sovinnon että oikeudenkäynnin mahdollisuudet — ja
+          niiden kustannukset.
+        </p>
+        <span class="service-readmore">Lue lisää <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES 2x2 -->
+<section class="principles">
+  <div class="container-editorial-wide">
+    <div class="principles-header" data-reveal>
+      <p class="caption-editorial principles-caption">Työtapamme</p>
+      <h2 class="headline-editorial">Miten toimimme</h2>
+    </div>
+
+    <div class="principles-grid">
+      <div data-reveal>
+        <div class="principles-img">
+          <div class="principles-img-placeholder">
+            <span class="principles-img-tag">[ kuva · ensitapaaminen ]</span>
+            <div class="principles-img-caption">
+              <div class="t">Rauhallinen ensitapaaminen</div>
+              <div class="s">Käymme tilanteesi läpi ilman kiirettä</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="principles-fact" data-reveal>
+        <span class="principles-fact-num">01</span>
+        <span class="principles-fact-title">Ensiarvio — maksuton</span>
+        <p class="principles-fact-body">
+          Ensimmäinen puhelinkeskustelu on aina veloitukseton. Kerromme lyhyesti,
+          onko asiassasi oikeudellista pohjaa, mitä vaihtoehtoja on ja mitä
+          kokonaisuus karkeasti maksaisi — ennen kuin mitään sovitaan.
+        </p>
+      </div>
+      <div class="principles-fact" data-reveal>
+        <span class="principles-fact-num">02</span>
+        <span class="principles-fact-title">Selkeä hinnoittelu</span>
+        <p class="principles-fact-body">
+          Käytämme oikeusturvavakuutuksia ja oikeusapua niissä asioissa, joissa
+          niitä saa. Pienissä töissä tuntiveloitus, isoissa kokonaishinta — aina
+          sovittu etukäteen, ei yllätyksiä.
+        </p>
+      </div>
+      <div data-reveal>
+        <div class="principles-img">
+          <div class="principles-img-placeholder var-2">
+            <span class="principles-img-tag">[ kuva · asiakirjatyö ]</span>
+            <div class="principles-img-caption">
+              <div class="t">Huolellinen asiakirjatyö</div>
+              <div class="s">Sopimukset pitävät myös tulevaisuudessa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container-editorial-wide">
+    <div class="why-header" data-reveal>
+      <span class="caption-editorial why-caption">Miksi valita meidät</span>
+      <h2>Lupauksia, jotka pidämme</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-quote" data-reveal>
+        <span class="why-quote-mark" aria-hidden="true">"</span>
+        <blockquote>
+          Kerromme sinulle aluksi arvion tilanteestasi, mahdollisuuksistasi,
+          kustannuksista ja mahdollisista riskeistä.
+          <span class="why-quote-author">Satu Miinala · Asianajaja, varatuomari</span>
+        </blockquote>
+      </div>
+
+      <div class="why-bullets" data-reveal>
+        <div class="why-bullet">
+          <span class="why-bullet-num">01</span>
+          <span class="why-bullet-text">Asianajajaliiton valvoma, ammattieettisesti sitoutunut palvelu</span>
+        </div>
+        <div class="why-bullet">
+          <span class="why-bullet-num">02</span>
+          <span class="why-bullet-text">Molemmat asianajajat myös varatuomareita — tuomioistuinosaamista</span>
+        </div>
+        <div class="why-bullet">
+          <span class="why-bullet-num">03</span>
+          <span class="why-bullet-text">Toimipaikat Rovaniemellä ja Kemijärvellä — lähellä sinua</span>
+        </div>
+        <div class="why-bullet">
+          <span class="why-bullet-num">04</span>
+          <span class="why-bullet-text">Oikeusturvavakuutukset ja oikeusapu selvitetään aina puolestasi</span>
+        </div>
+        <div class="why-bullet">
+          <span class="why-bullet-num">05</span>
+          <span class="why-bullet-text">Ensiarvio ilman kustannuksia — vasta sen jälkeen päätät</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container-editorial">
+    <div class="reviews-header" data-reveal>
+      <p class="caption-editorial reviews-caption">Asiakkaidemme sanoin</p>
+      <h2 class="headline-editorial">Arvostelut</h2>
+      <div class="reviews-rating">
+        <span class="reviews-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </span>
+        <span class="reviews-score">4.9</span>
+        <span>· asiakaspalautteista</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review" data-reveal>
+        <svg class="review-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7zm10 0h-4c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7z"/></svg>
+        <p>Autamme ihmisiä hyvästä sydämestä enemmän kuin olisi tarpeita auttaa.</p>
+        <span class="review-attr">Satu Miinala · Asianajaja, VT</span>
+      </div>
+      <div class="review" data-reveal>
+        <svg class="review-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7zm10 0h-4c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7z"/></svg>
+        <p>Kemijärvi on kotikenttäni. Asiakkaideni ei tarvitse matkustaa kaupunkiin saadakseen hyvää oikeudellista apua.</p>
+        <span class="review-attr">Niina Kaisanlahti · Asianajaja, VT</span>
+      </div>
+      <div class="review" data-reveal>
+        <svg class="review-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7zm10 0h-4c0-2.2 1.8-4 4-4V5c-3.3 0-6 2.7-6 6v7h6v-7z"/></svg>
+        <p>Olemme puolellasi alusta asti, hiljaa ja luottamuksellisesti.</p>
+        <span class="review-attr">Niina Kaisanlahti · Asianajaja, VT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTORNEYS -->
+<section class="attorneys" id="asianajajat">
+  <div class="container-editorial">
+    <div class="attorneys-header" data-reveal>
+      <p class="caption-editorial attorneys-caption">Tiimi</p>
+      <h2 class="headline-editorial">Asianajajat</h2>
+    </div>
+
+    <div class="attorneys-grid">
+      {LAWYERS.map((l) => (
+        <a class="attorney" href={`/asianajajat#${l.slug}`} data-reveal>
+          <div class="attorney-portrait">
+            <img src={l.image} alt={l.name} loading="lazy" />
+          </div>
+          <h3 class="attorney-name">{l.name}</h3>
+          <p class="attorney-role">Asianajaja · Varatuomari</p>
+          <div class="attorney-contact">
+            <span>{l.phone}</span>
+            <span>{l.email}</span>
+            <span class="attorney-meta">Toimipaikka{l.office.includes('&') ? 't' : ''} · {l.office}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="kysymykset">
+  <div class="container-editorial-narrow">
+    <div class="faq-header" data-reveal>
+      <p class="caption-editorial faq-caption">Kysymyksiä?</p>
+      <h2 class="headline-editorial">Usein kysytyt</h2>
+    </div>
+
+    <div class="faq-list" id="faqList">
+      <div class="faq-item is-open" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Miten saan ensimmäisen yhteydenoton käyntiin?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Soita tai lähetä yhteydenottolomake. Käymme puhelimessa lyhyesti läpi tilanteesi
+          ja arvioimme, tarvitsetko varsinaista tapaamista vai riittääkö
+          puhelinkonsultaatio. Ensimmäinen yhteydenotto on maksuton.
+        </div></div>
+      </div>
+
+      <div class="faq-item" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Millä alueella palvelette?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Toimipaikat ovat Rovaniemellä ja Kemijärvellä. Palvelemme asiakkaita koko Lapin
+          alueella — tarvittaessa etänä tai paikan päällä. Mahdollisista matkakuluista
+          sovitaan aina etukäteen.
+        </div></div>
+      </div>
+
+      <div class="faq-item" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Miten asianajopalkkio muodostuu?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Palkkio määräytyy käytetyn työajan mukaan tai erikseen sovittuna
+          kokonaishintana. Kerromme hinnoitteluperiaatteet heti ensimmäisessä
+          keskustelussa. Jos sinulla on oikeusturvavakuutus tai oikeusapuun oikeus,
+          selvitämme sen puolestasi.
+        </div></div>
+      </div>
+
+      <div class="faq-item" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Kuinka pian saan ajan?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Kiireelliset rikosasiat ja esitutkintapuhuttelut hoidamme mahdollisimman
+          nopeasti. Perhe- ja perintöasioissa tapaamisaika löytyy yleensä muutaman
+          työpäivän sisällä.
+        </div></div>
+      </div>
+
+      <div class="faq-item" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Missä ajassa perukirja on laadittava?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Perukirja on laadittava kolmen kuukauden kuluessa kuolemasta. Verohallinto
+          voi myöntää lisäaikaa hakemuksesta, mutta pyyntö on tehtävä ennen
+          määräajan umpeutumista. Otamme vastuun aikataulusta ja tarvittavista
+          asiakirjoista puolestasi.
+        </div></div>
+      </div>
+
+      <div class="faq-item" data-reveal>
+        <button class="faq-question" type="button">
+          <h3>Mitä tarkoittaa avio-oikeus osituksessa?</h3>
+          <span class="faq-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Avio-oikeuden pääsääntö on, että avioliiton aikana hankittu omaisuus jaetaan
+          tasan. Avioehtosopimuksella tai perintönä saadulla omaisuudella voi olla
+          erityisasema. Ensiarviossa käymme läpi, mitä omaisuutta ositus koskee ja
+          miten tasinko lasketaan.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="yhteydenotto">
+  <div class="container-editorial-wide">
+    <div class="contact-grid">
+      <div class="contact-left" data-reveal>
+        <p class="caption-editorial">Ota yhteyttä</p>
+        <h2 class="headline-editorial">Aloitetaan rauhassa</h2>
+        <p class="contact-intro">
+          Kerro lyhyesti tilanteestasi — vastaamme arkisin vuorokauden sisällä.
+          Ensimmäinen yhteydenotto on luottamuksellinen ja maksuton.
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.91.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+358404876650">040 487 665 · Satu Miinala</a>
+          </div>
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.91.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+358400914316">0400 914 316 · Niina Kaisanlahti</a>
+          </div>
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <a href="mailto:info@miinalakaisanlahti.fi">info@miinalakaisanlahti.fi</a>
+          </div>
+        </div>
+
+        <div class="offices">
+          {OFFICES.map((o) => (
+            <div>
+              <div class="office-label">{o.city}</div>
+              <div class="office-addr">{o.address}<br/>{o.zip}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="contact-right" data-reveal>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="f-name">Nimi</label>
+            <input id="f-name" name="name" type="text" required />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email">Sähköposti</label>
+              <input id="f-email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="f-phone">Puhelin</label>
+              <input id="f-phone" name="phone" type="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-topic">Aihealue</label>
+            <select id="f-topic" name="topic">
+              <option>Rikosasia</option>
+              <option>Perheoikeudellinen asia</option>
+              <option>Perintöasia / perunkirjoitus</option>
+              <option>Riita-asia</option>
+              <option>Muu / en osaa sanoa</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Viesti</label>
+            <textarea id="f-msg" name="message" rows="4" required></textarea>
+          </div>
+
+          <label class="form-privacy">
+            <input type="checkbox" required />
+            <span>Hyväksyn, että viestini käsitellään luottamuksellisesti. Lue
+              <a href="/tietosuojaseloste">tietosuojaseloste</a>.</span>
+          </label>
+
+          <div class="form-submit">
+            <button type="submit">
+              <span>Lähetä viesti</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div id="formThanks" class="form-thanks">
+            <strong>Kiitos yhteydenotostasi</strong>
+            Vastaamme arkisin vuorokauden sisällä. Kiireellisissä asioissa soita
+            suoraan numeroon 040 487 665.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .values-container-inner { position: relative; }
+  .services-caption { display: block; margin-bottom: 1.25rem; }
+  .principles-caption { margin-bottom: 1rem; }
+  .why-caption { display: block; margin-bottom: 1rem; color: hsl(var(--primary)); }
+  .reviews-caption { margin-bottom: 1rem; }
+  .reviews-score { font-weight: 500; color: hsl(var(--foreground)); }
+  .attorneys-caption { margin-bottom: 1rem; }
+  .faq-caption { margin-bottom: 1rem; }
+  #formThanks { display: none; }
+</style>
