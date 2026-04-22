@@ -1,4 +1,6 @@
 ---
+import { SERVICES } from '../config/site'
+
 interface Props {
   isHome?: boolean
 }
@@ -16,7 +18,25 @@ const ctaHref = isHome ? '#yhteydenotto' : '/yhteystiedot'
       <small>Asianajotoimisto · Lappi</small>
     </a>
     <div class="nav-links">
-      <a href={palvelutHref} class="nav-link">Palvelut</a>
+      <div class="nav-item nav-has-dropdown" data-dropdown>
+        <a href={palvelutHref} class="nav-link">Palvelut</a>
+        <button
+          type="button"
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="palvelut-menu"
+          aria-haspopup="true"
+          aria-label="Avaa palvelut-alavalikko"
+          data-dropdown-toggle
+        >
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+        </button>
+        <ul class="nav-dropdown" id="palvelut-menu" role="menu">
+          {SERVICES.map(s => (
+            <li role="none"><a role="menuitem" href={s.href} class="nav-dropdown-link">{s.title}</a></li>
+          ))}
+        </ul>
+      </div>
       <a href="/asianajajat" class="nav-link">Asianajajat</a>
       <a href="/kustannukset" class="nav-link">Kustannukset</a>
       <a href="/artikkelit" class="nav-link">Artikkelit</a>
@@ -34,7 +54,26 @@ const ctaHref = isHome ? '#yhteydenotto' : '/yhteystiedot'
 <div class="nav-mobile" id="navMobile">
   <div class="container-editorial">
     <div class="nav-mobile-links">
-      <a href={palvelutHref} class="nav-mobile-link" data-closemob>Palvelut</a>
+      <div class="nav-mobile-group" data-mobile-dropdown>
+        <div class="nav-mobile-row">
+          <a href={palvelutHref} class="nav-mobile-link" data-closemob>Palvelut</a>
+          <button
+            type="button"
+            class="nav-mobile-sub-toggle"
+            aria-expanded="false"
+            aria-controls="palvelut-mobile-submenu"
+            aria-label="Avaa palvelut-alavalikko"
+            data-mobile-sub-toggle
+          >
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+          </button>
+        </div>
+        <ul class="nav-mobile-sublinks" id="palvelut-mobile-submenu">
+          {SERVICES.map(s => (
+            <li><a href={s.href} class="nav-mobile-sublink" data-closemob>{s.title}</a></li>
+          ))}
+        </ul>
+      </div>
       <a href="/asianajajat" class="nav-mobile-link" data-closemob>Asianajajat</a>
       <a href="/kustannukset" class="nav-mobile-link" data-closemob>Kustannukset</a>
       <a href="/artikkelit" class="nav-mobile-link" data-closemob>Artikkelit</a>
@@ -42,3 +81,40 @@ const ctaHref = isHome ? '#yhteydenotto' : '/yhteystiedot'
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const toggle = e.target.closest('[data-dropdown-toggle]');
+    if (toggle) {
+      const parent = toggle.closest('[data-dropdown]');
+      if (!parent) return;
+      const open = parent.getAttribute('data-open') === 'true';
+      parent.setAttribute('data-open', open ? 'false' : 'true');
+      toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      return;
+    }
+    document.querySelectorAll('[data-dropdown][data-open="true"]').forEach(el => {
+      if (!el.contains(e.target)) {
+        el.setAttribute('data-open', 'false');
+        const t = el.querySelector('[data-dropdown-toggle]');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
+    const mtoggle = e.target.closest('[data-mobile-sub-toggle]');
+    if (mtoggle) {
+      const mparent = mtoggle.closest('[data-mobile-dropdown]');
+      if (!mparent) return;
+      const mopen = mparent.getAttribute('data-open') === 'true';
+      mparent.setAttribute('data-open', mopen ? 'false' : 'true');
+      mtoggle.setAttribute('aria-expanded', mopen ? 'false' : 'true');
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('[data-dropdown][data-open="true"]').forEach(el => {
+      el.setAttribute('data-open', 'false');
+      const t = el.querySelector('[data-dropdown-toggle]');
+      if (t) { t.setAttribute('aria-expanded', 'false'); t.focus(); }
+    });
+  });
+</script>

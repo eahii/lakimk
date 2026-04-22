@@ -26,6 +26,13 @@ export const LAWYERS = [
   },
 ] as const
 
+export const SERVICES = [
+  { slug: 'rikosasiat', href: '/palvelut/rikosasiat', title: 'Rikosasiat' },
+  { slug: 'perheoikeudelliset-asiat', href: '/palvelut/perheoikeudelliset-asiat', title: 'Perheoikeudelliset asiat' },
+  { slug: 'perintooikeudelliset-asiat', href: '/palvelut/perintooikeudelliset-asiat', title: 'Perintöoikeudelliset asiat' },
+  { slug: 'riita-asiat', href: '/palvelut/riita-asiat', title: 'Riita-asiat' },
+] as const
+
 export const OFFICES = [
   {
     city: 'Rovaniemi',
